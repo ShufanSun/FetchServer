@@ -97,5 +97,22 @@ public class PointServiceImpl implements PointService{
         return pointsSpentList;
     }
 
+    @Override
+    public Map<String, Integer> getPointsBalance() {
+        List<Points> userPoints = pointsRepository.findAll();
+        Map<String, Integer> filtered = new HashMap<>();
+        // Iterate through the points transactions to spend the points
+        for (Points balance : userPoints) {
+            int points=balance.getPoints();
+            String payer=balance.getPayer();
+
+            // Update the points spent by the payer
+            filtered.put(payer, filtered.getOrDefault(payer, 0) +points);
+
+        }
+
+        return filtered;
+    }
+
 
 }

@@ -36,4 +36,9 @@ public ResponseEntity<?> spendPoints(@RequestBody Map<String, Integer> requestBo
     }
 }
 
+@GetMapping("/balance")
+    public Map<String, Integer> getPointBalance(){
+
+        return pointService.getPointsBalance();
+}
 }
