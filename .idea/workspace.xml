@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9196608a-8110-4846-b329-6dc5a8202fe7" name="Changes" comment="All tests passed">
-      <change afterPath="$PROJECT_DIR$/src/images/Maven.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/serverConnected.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/summary.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ShufanServer/StartApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ShufanServer/StartApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ShufanServer/controller/PointController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ShufanServer/controller/PointController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ShufanServer/model/BalanceResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ShufanServer/model/BalanceResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ShufanServer/model/Points.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ShufanServer/model/Points.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ShufanServer/repositories/PointsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ShufanServer/repositories/PointsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ShufanServer/service/PointService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ShufanServer/service/PointService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ShufanServer/service/PointServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ShufanServer/service/PointServiceImpl.java" afterDir="false" />
+    <list default="true" id="9196608a-8110-4846-b329-6dc5a8202fe7" name="Changes" comment="Added README.md">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,8 +58,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\sofin\IdeaProjects\FetchServer\src\images" />
       <recent name="C:\Users\sofin\IdeaProjects\FetchServer\src" />
+      <recent name="C:\Users\sofin\IdeaProjects\FetchServer\src\images" />
       <recent name="C:\Users\sofin\IdeaProjects\FetchServer" />
     </key>
   </component>
@@ -96,12 +86,21 @@
       <option name="project" value="LOCAL" />
       <updated>1695921014151</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added summary.txt and README.md files, task finished">
+      <created>1695933111024</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1695933111024</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Passed /spend tests" />
     <MESSAGE value="All tests passed" />
-    <option name="LAST_COMMIT_MESSAGE" value="All tests passed" />
+    <MESSAGE value="Added summary.txt and README.md files, task finished" />
+    <MESSAGE value="Added README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added README.md" />
   </component>
 </project>
