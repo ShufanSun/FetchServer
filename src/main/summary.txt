@@ -1,0 +1,67 @@
+=======================================================================================================================
+Author: Shufan Sun
+1.
+Tools, Libraries and language I chose to use:
+- Springboot
+- Postman
+- MySQL & phpmyadmin
+- XAMPP
+- IntelliJ
+- Maven
+- Java
+- DAO structure
+
+I chose to implement the project using Springboot DAO structure because spring Boot is a powerful choice for building
+RESTful APIs by simplifying the development process by providing pre-configured templates and tools, and DAO structure
+makes the project scalable and easily-maintainable.
+
+For my last summer internship, I interned as a backend engineer at Wingtech Inc., Shanghai, where I got to learn how to
+build and test APIs. I found it especially efficient and effective when it comes to group development for bigger
+projects. For example, you could have the main branch and the development branch. If I have to expand the project and
+collaborate with other developers, IntelliJ would be an excellent tool to help with code merging and conflict resolve.
+
+I chose Maven because it simplifies the management of project dependencies. I can declare my project's dependencies in
+the pom.xml file, and Maven handles the download and classpath setup automatically. This greatly reduces the complexity
+of managing external libraries and makes setting project up for others a lot easier. Developers on a team can use the
+same build and dependency management tool, which reduces configuration errors and ensures that everyone follows best
+practices.
+
+I picked Java is because Java is a stable language that supports big scale development, which is useful when it comes to
+business development.
+
+I chose to access and test databases through myphpadmin, XAMPP and Postman because they make it easier to manually
+manipulate servers and ports, and provides clear data visualization.
+
+=======================================================================================================================
+2.
+Advantages:
+Already listed in the above section
+
+Disadvantages:
+Using local server with the help of XAMPP and myphpadmin is not the most efficient way to approach databases. I think
+it's better if we have Beaver installed that access a running remote server and store data in the database instead of
+getting an emptied database everytime we start the local server and run the springboot, then add new data through
+postman.
+
+This project is really resource intensive, the user would have to install and configure a lot of environments. Also
+there exists possibilities that the installed version are incompatible and therefore might need some manual fixes.
+
+If the project is a lot bigger the server starting time would get a lot longer.
+
+Potential info leak. Since in java developers have to manage resources explicitly, there might appear some info leaks.
+
+=======================================================================================================================
+3.
+I think the most challenging but also the most fun project was when I tried to develop a 2d and 3d Unity game with my
+friend from scratch. After designing plots and the proposals, we set up some approximate deadlines for each part of
+the development. The biggest challenge we faced was not only the learning curve for learning a completely new language
+that we didn't even know before I said I want to make a game. It was, in fact, game performance optimization.
+The game has a giant terrain with huge 3D asset models, together with potential shader incompatibility that could cause
+the entire project to crash in an inconvertible way (or you can paint the textures back manually).
+After scraping information all over internet and a lot of discussions, we reached to a solution that could preserve most
+of the codes we wrote while optimizing the game performance that increases frame rates.
+We worked cross-platform and made a self-generating terrain that would produce randomized scenes as the player walk
+towards different directions. Throughout the process, I found it useful to collaborate someone who actually plays game
+instead of focusing on the same area as mine. He provided me with a lot of insights about plot developments, balance
+control, and game experience overall. Besides, code review increased our efficiency and motivation greatly. Overall I'd
+say it's for now one of my favorite projects, and I'm looking forward to more teamwork and collaborations:)

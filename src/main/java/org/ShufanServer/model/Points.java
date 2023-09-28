@@ -5,9 +5,9 @@ import javax.persistence.*;
 @Entity
 @Table(name="pointsTable")
 public class Points {
-    //value declaration for the information of each json
+    //value declaration for the information of each json according to database columns
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)//self-generated id
     @Column(name="id")
     private int id;
 

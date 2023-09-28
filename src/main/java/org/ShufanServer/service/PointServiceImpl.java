@@ -13,16 +13,26 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Implementation of the PointService interface that handles points-related operations.
+ * Author: Shufan Sun
+ */
 @Service
-public class PointServiceImpl implements PointService{
+public class PointServiceImpl implements PointService {
 
     @Autowired
     private PointsRepository pointsRepository;
 
+    /**
+     * Save a points transaction.
+     *
+     * @param points The points transaction to be saved.
+     * @return The saved points transaction.
+     */
     @Override
     public Points savePoints(Points points) {
-        Points existing=pointsRepository.findById(points.getId()).orElse(null);
-        if (existing!=null) {
+        Points existing = pointsRepository.findById(points.getId()).orElse(null);
+        if (existing != null) {
             // If the points object has a non-null ID, it's an existing record, so update it.
             Points existingPoints = pointsRepository.findById(points.getId()).orElse(null);
 
@@ -45,10 +55,14 @@ public class PointServiceImpl implements PointService{
     }
 
 
-
-
+    /**
+     * Spend points based on the specified amount.
+     *
+     * @param pointsToSpend The number of points user wants to spend.
+     * @return A list of spent points transactions.
+     */
     @Override
-    public List<SpentResponse> updatePoints(@RequestParam(value="points" )int pointsToSpend) {
+    public List<SpentResponse> updatePoints(@RequestParam(value = "points") int pointsToSpend) {
         //validate user input
         if (pointsToSpend <= 0) {
             throw new IllegalArgumentException("Invalid points to spend");
@@ -91,23 +105,27 @@ public class PointServiceImpl implements PointService{
         for (Map.Entry<String, Integer> entry : pointsSpentByPayer.entrySet()) {
             SpentResponse spentResponse = new SpentResponse(entry.getKey(), entry.getValue());
             //if there's no points left for this payer, we would only show the points deducted from other payers
-            if(entry.getValue()!=0)
-            pointsSpentList.add(spentResponse);
+            if (entry.getValue() != 0) pointsSpentList.add(spentResponse);
         }
         return pointsSpentList;
     }
 
+    /**
+     * Get the points balance per payer.
+     *
+     * @return A map containing the points balance per payer.
+     */
     @Override
     public Map<String, Integer> getPointsBalance() {
         List<Points> userPoints = pointsRepository.findAll();
         Map<String, Integer> filtered = new HashMap<>();
         // Iterate through the points transactions to spend the points
         for (Points balance : userPoints) {
-            int points=balance.getPoints();
-            String payer=balance.getPayer();
+            int points = balance.getPoints();
+            String payer = balance.getPayer();
 
             // Update the points spent by the payer
-            filtered.put(payer, filtered.getOrDefault(payer, 0) +points);
+            filtered.put(payer, filtered.getOrDefault(payer, 0) + points);
 
         }
 
